@@ -12,6 +12,7 @@
 \BOOKMARK [1][-]{section.11}{Initial RL Formulation:}{}% 12
 \BOOKMARK [2][-]{subsection.11.1}{State Space}{section.11}% 13
 \BOOKMARK [2][-]{subsection.11.2}{Action Space}{section.11}% 14
-\BOOKMARK [2][-]{subsection.11.3}{Learning Method}{section.11}% 15
-\BOOKMARK [1][-]{section.12}{References:}{}% 16
-\BOOKMARK [1][-]{section.13}{Random Thoughts:}{}% 17
+\BOOKMARK [2][-]{subsection.11.3}{Time-Domain Scheduling}{section.11}% 15
+\BOOKMARK [2][-]{subsection.11.4}{Learning Method}{section.11}% 16
+\BOOKMARK [1][-]{section.12}{References:}{}% 17
+\BOOKMARK [1][-]{section.13}{Random Thoughts:}{}% 18

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.15)  27 FEB 2018 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.15)  28 FEB 2018 23:24
 entering extended mode
 **./RL+MANETs.tex
 (RL+MANETs.tex
@@ -608,35 +608,35 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 Package: ulem 2012/05/18
 \ULdepth=\dimen160
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 297.
-Package hyperref Info: Option `colorlinks' set `true' on input line 297.
+Package hyperref Info: Option `breaklinks' set `true' on input line 299.
+Package hyperref Info: Option `colorlinks' set `true' on input line 299.
 
 (RL+MANETs.aux)
 \openout1 = `RL+MANETs.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 304.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 304.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 306.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 306.
 
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 304.
-LaTeX Font Info:    ... okay on input line 304.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 304.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 306.
+LaTeX Font Info:    ... okay on input line 306.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 306.
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ppl.fd"
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -719,7 +719,7 @@ Package caption Info: End \AtBeginDocument code.
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 304.
+Package hyperref Info: Link coloring ON on input line 306.
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.
 sty"
@@ -731,18 +731,18 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 304.
-LaTeX Info: Redefining \pageref on input line 304.
-LaTeX Info: Redefining \nameref on input line 304.
+LaTeX Info: Redefining \ref on input line 306.
+LaTeX Info: Redefining \pageref on input line 306.
+LaTeX Info: Redefining \nameref on input line 306.
  (RL+MANETs.out) (RL+MANETs.out)
 \@outlinefile=\write4
 \openout4 = `RL+MANETs.out'.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 308.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 310.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 314.
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 318.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 316.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 320.
 
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ppl.fd"
@@ -750,50 +750,50 @@ File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 382.
+(hyperref)                than one, level fixed on input line 384.
 
-<photos/WANET2.png, id=71, 429.605pt x 420.57124pt>
+<photos/WANET2.png, id=75, 429.605pt x 420.57124pt>
 File: photos/WANET2.png Graphic file (type png)
 <use photos/WANET2.png>
-Package pdftex.def Info: photos/WANET2.png  used on input line 384.
+Package pdftex.def Info: photos/WANET2.png  used on input line 386.
 (pdftex.def)             Requested size: 343.68446pt x 336.46387pt.
 [1
 
 {C:/Users/Justin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<photos/interference.png, id=83, 337.26pt x 194.7275pt>
+<photos/interference.png, id=87, 337.26pt x 194.7275pt>
 File: photos/interference.png Graphic file (type png)
 <use photos/interference.png>
-Package pdftex.def Info: photos/interference.png  used on input line 396.
+Package pdftex.def Info: photos/interference.png  used on input line 398.
 (pdftex.def)             Requested size: 269.80836pt x 155.78516pt.
  [2 <./photos/WANET2.png> <./photos/interference.png>]
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 402.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 404.
 
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 402
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 404
 .
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omlzplm.fd
 "
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 402
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 404
 .
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omszplm.fd
 "
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 402
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 404
 .
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omxzplm.fd
 "
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 402
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 404
 .
 
 ("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd
@@ -801,49 +801,75 @@ LaTeX Font Info:    Try loading font information for OT1+zplm on input line 402
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 402.
+(Font)              scaled to size 11.40997pt on input line 404.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 402.
+(Font)              scaled to size 8.33606pt on input line 404.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 402.
+(Font)              scaled to size 6.25204pt on input line 404.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 402.
+(Font)              scaled to size 11.40997pt on input line 404.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 402.
+(Font)              scaled to size 8.33606pt on input line 404.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 402.
-<photos/hiddennode.png, id=90, 527.9725pt x 177.66376pt>
+(Font)              scaled to size 6.25204pt on input line 404.
+<photos/hiddennode.png, id=94, 527.9725pt x 177.66376pt>
 File: photos/hiddennode.png Graphic file (type png)
 <use photos/hiddennode.png>
-Package pdftex.def Info: photos/hiddennode.png  used on input line 407.
+Package pdftex.def Info: photos/hiddennode.png  used on input line 409.
 (pdftex.def)             Requested size: 375.80544pt x 126.45932pt.
  [3 <./photos/hiddennode.png>] [4] [5]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 657.
- [6]pdfTeX warning (ext4): destination with the same identifier (name{random-th
-oughts}) has been already used, duplicate ignored
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 655.
+<photos/undirected-graph.png, id=131, 500.62032pt x 365.86688pt>
+File: photos/undirected-graph.png Graphic file (type png)
+<use photos/undirected-graph.png>
+Package pdftex.def Info: photos/undirected-graph.png  used on input line 664.
+(pdftex.def)             Requested size: 309.66461pt x 226.3215pt.
+ [6 <./photos/undirected-graph.png>]
+<photos/graph-hist.png, id=143, 657.1752pt x 435.5472pt>
+File: photos/graph-hist.png Graphic file (type png)
+<use photos/graph-hist.png>
+Package pdftex.def Info: photos/graph-hist.png  used on input line 708.
+(pdftex.def)             Requested size: 309.66461pt x 205.23222pt.
+<photos/Quene.png, id=144, 252.945pt x 141.52875pt>
+File: photos/Quene.png Graphic file (type png)
+<use photos/Quene.png>
+Package pdftex.def Info: photos/Quene.png  used on input line 717.
+(pdftex.def)             Requested size: 151.76816pt x 84.9179pt.
+
+[7 <./photos/graph-hist.png> <./photos/Quene.png>]
+<photos/graph-conv-net.png, id=153, 694.09312pt x 201.75375pt>
+File: photos/graph-conv-net.png Graphic file (type png)
+<use photos/graph-conv-net.png>
+Package pdftex.def Info: photos/graph-conv-net.png  used on input line 793.
+(pdftex.def)             Requested size: 375.80544pt x 109.23785pt.
+ [8 <./photos/graph-conv-net.png>] [9]
+("C:\Users\Justin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)pdfTeX warning (ext4): destination with the same identifier (name{random-thoug
+hts}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.696 ...Random Thoughts:}\label{random-thoughts}}
-                                                   [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 765.
- [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 765.
+l.853 ...Random Thoughts:}\label{random-thoughts}}
+                                                   [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 925.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 925.
  (RL+MANETs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 765.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 765.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 925.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 925.
 Package rerunfilecheck Info: File `RL+MANETs.out' has not changed.
-(rerunfilecheck)             Checksum: 016B703E8D1898233D10BA695CD8729E;1056.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 765.
+(rerunfilecheck)             Checksum: 78A395B4610CE02F6BA182AEEA2E92DE;1131.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 925.
  ) 
 Here is how much of TeX's memory you used:
- 10913 strings out of 493303
- 167090 string characters out of 3129349
- 266846 words of memory out of 3000000
- 14193 multiletter control sequences out of 15000+200000
+ 11429 strings out of 493303
+ 172569 string characters out of 3129349
+ 266830 words of memory out of 3000000
+ 14700 multiletter control sequences out of 15000+200000
  27129 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,38p,388b,421s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,6n,38p,388b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Justin/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.en
 c}<C:/Users/Justin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmmi10.pfb><C:/Users/Justin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
@@ -855,9 +881,9 @@ AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users
 C:/Users/Justin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palatino/uplr
 8a.pfb><C:/Users/Justin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/palat
 ino/uplri8a.pfb>
-Output written on RL+MANETs.pdf (8 pages, 271782 bytes).
+Output written on RL+MANETs.pdf (11 pages, 585641 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
- 56 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 180 words of extra memory for PDF output out of 10000 (max. 10000000)
 

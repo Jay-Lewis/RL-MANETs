@@ -28,13 +28,15 @@
     \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
     \else\Gin@nat@width\fi}
     \makeatother
-    \let\Oldincludegraphics\includegraphics
-    \graphicspath{ {photos/} }
-    % Set max figure width to be 80% of text width, for now hardcoded.
-    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
-    % Ensure that by default, figures have no caption (until we provide a
-    % proper Figure object with a Caption API and a way to capture that
-    % in the conversion process - todo).
+	\graphicspath{ {photos/} }    
+    
+%    \let\Oldincludegraphics\includegraphics
+%    % Set max figure width to be 80% of text width, for now hardcoded.
+%    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+%    % Ensure that by default, figures have no caption (until we provide a
+%    % proper Figure object with a Caption API and a way to capture that
+%    % in the conversion process - todo).
+    
     \usepackage{caption}
     \DeclareCaptionLabelFormat{nolabel}{}
     \captionsetup{labelformat=nolabel}
@@ -381,7 +383,7 @@
     \hypertarget{example}{%
 \subsubsection{MANET Example:}\label{example}}
 
-\includegraphics{WANET2.png}
+\includegraphics[width=.8\maxwidth]{WANET2.png}
 
 \emph{Range of communication demonstrated by surrounding circle}
 
@@ -393,7 +395,7 @@ The broadcasted message is transmitted between nodes over a certain
 frequency channel. If two devices use the channel simulatenously, a
 ``collision'' occurs. This nullifies both broadcasts.
 
-\includegraphics{interference.png}
+\includegraphics[width=.8\maxwidth]{interference.png}
 
 \pagebreak
 
@@ -404,7 +406,7 @@ example in the \emph{``hidden node problem''} (see below), node
 will occur; furthermore, node \(N_{A}\) cannot attribute this collision
 to \(N_{C}\) unless information is shared amongst the nodes.
 
-\includegraphics{hiddennode.png}
+\includegraphics[width=.8\maxwidth]{hiddennode.png}
 
 These interference problems coupled with a decentralized control scheme
 can lead to inefficient routing. A large portion of time can be spent
@@ -464,10 +466,6 @@ Learning?:}\label{why-reinforcement-learning}}
 \begin{itemize}
 \tightlist
 \item
-  More direct, global combinatiorial optimization in a distributed
-  fashion seems unlikely to scale effectively (finding the exact optimum
-  is NP-hard I would imagine)
-\item
   The ``best'' strategy given limited computation time and limited power
   usage is difficult to derive directly
 \item
@@ -507,7 +505,7 @@ Constraints}\label{physical-environmental-constraints}}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Number of unique frequency channels \(N_{c}\) is variable and will be
+  Number of unique frequency channels is variable and will be
   analyzed to see achievability of specific data rates
 \item
   Range of unique frequency channels is proportional to transmission
@@ -655,41 +653,200 @@ Assume constraints from sections 6 and 7. The following is an initial attempt
 at formulating the state space, action space, and learning mechanism. 
 
 \subsection{State Space}
-Let the state space be broken into two primary sections: 
+Let the state space be broken into two primary sections as described below:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item \underline{Environment state}
 
-Let a node's estimate of the true environment state be represented by a directed graphical model $G(N,E)$ with nodes $N$ and edges $E$.
+Let a node's estimate of the true environment state be represented by an undirected graphical model $G(V,E)$ with vertices $V$ and edges $E$.
 
-%%graphical model image
+\includegraphics[width=.7\maxwidth]{undirected-graph.png}
 
-Each node $n \in N$ represents an agent within the assumed collaborative scheme. (Let $n_\ell$ represent the local agent).  Each edge $e \in E$ represents the communication channel connecting two nodes.
 
-Each node $n \in \{N \diagup n_\ell\}$ will hold the following information:
+Each vertex $v \in V$ represents an agent within the assumed collaborative scheme.
+(Let $v_\ell$ represent the local agent).  Each edge $e(v_i,v_j) \in E$ represents
+the communication channel connecting two nodes.
+
+Each vertex $v_i \in \{V \diagup v_\ell\}$ will hold the following information:
 \begin{itemize}
 \item
 node ID
 \item
-flag if node is a destination of packet in buffer
-\item 
-counter for time elapsed since last received topology information from node
+flag if $v_i$ is a source or destination of a packet in buffer
 \item
-information regarding collisions between $n_\ell$ and $n \in \{N \diagup n_\ell\}$
+counter for time elapsed since $v_\ell$ directly communicated with $v_i$ last (only for neighbors)
+\item
+counter for time elapsed since $v_\ell$ received topology information from $v_i$
+\item
+information regarding collisions between $v_\ell$ and $v \in \{V \diagup v_\ell\}$
 \end{itemize}
 
+\pagebreak
+
+Each edge $e \in E$ will will hold the following information:
+\begin{itemize}
+\item
+channel quality characteristic 
+\begin{itemize}
+\item could be simple: number representing channel strength
+\item could be complex: vector-valued characterization
+\end{itemize}
+\item
+uncertainty metric for channel information (freshness counter)
+\end{itemize}
+
+Assuming each node can communicate over multiple frequency channels $f_1,f_2,...$
+for each link $e(v_i,v_j)$, the above formulation can be extended to a vector where
+each entry characterizes a sub-channel for each frequency $f_1,f_2,...$
+
+Additionally, it may be beneficial to maintain a history of $n_\ell$'s topology
+estimates as a more dynamic state space.
+I.e. $\vec{G} = \{G_1(V_1,E_1),...,G_m(V_m,E_m)\}$
+
+\medskip
+\includegraphics[width=.7\maxwidth]{graph-hist.png}
+\medskip
+
 \item \underline{Local buffer state}
+
+The buffer state of $ v_\ell$ will represent the node's local packet buffer. It is 
+assumed the buffer is dynamic in that the agent may send packets without respecting
+the order they were received.
+
+\includegraphics[scale=0.6]{Quene.png}
+
+Each entry in the buffer will include the following information:
+
+\begin{itemize}
+\item
+flag for packet presence
+\item
+packet source, destination
+\item
+time spent traveling through network
+\item
+time spent in buffer
+\item
+estimate to reach destination (if destination location is known)
+\end{itemize}
 
 \end{enumerate}
 
 \subsection{Action Space}
+Similar to the state space, the action space can be divided into two sections as described below:
+
+\begin{enumerate}
+\item
+\underline{Communication Actions}
+
+At each discrete time instance $t$ the agent will choose among the available actions. 
+These actions all utilize the same communication medium and are thus mutually 
+exclusive.
+ 
+\begin{itemize}
+\item
+Sense subset of neighboring nodes $S(N(n_\ell)) \in N(n_\ell)$
+\item
+forward prioritized packet to neighbor $n_j \in neighborhood(n_\ell)$
+\item
+share topology estimate $G(V,E)$ with node subset $S(V) \subseteq V$
+(this would not directly scale well, but it can be pared down)
+\item
+WAIT/do nothing
+\end{itemize}
+
+\item
+\underline{Buffer Scheduling}
+
+Buffer scheduling will ultimately prioritize packets within the buffer for sending.
+The buffer scheduler could potentially operate semi-asynchronously from the 
+communication portion of the agent.  
+\end{enumerate}
+
+
+\subsection{Time-Domain Scheduling}
+In order to avoid collisions between two transmitting nodes, a time-domain scheduling 
+algorithm should be utilized. Such an algorithm will attempt to 
+schedule node transmissions in time to minimize the number of collisions. Even with a 
+centralized controller, scheduling for ad hoc networks is NP-hard (Data Networks, Bertsekas and Gallager)
+
+\medskip
+
+Random access scheduling protocols for MANETs exist and could be used in order to 
+simplify the scope of the problem. I am unsure of how well these scheduling 
+algorithms perform; however, I plan to investigate how scheduling may benefit from 
+learning algorithms. 
 
 \subsection{Learning Method}
+
+The state and action space for the above constructions seems very large (possibly
+intractably large). I would imagine that the state and actions spaces can be pared 
+down by simple assumptions (such as reducing the size of the input topology graph
+by only preserving full information for a subset of the graph)
+
+If the state and action spaces remained large, I would think that some functional 
+approximation method would be advised. The envisioned RL algorithm would utilize
+work on Graph Convolutional Neural Networks. By preserving the graphical structure of the network toplogy, the full information quality of the data would 
+be preserved. 
+
+\includegraphics[width=.8\maxwidth]{graph-conv-net.png}
+
+The specific formulation of the deep Q-network using graph convolutional neural 
+networks is left open. Additionally, I am still considering what paradigm should
+be considered for the multi-agent interaction and how the reinforcement signals
+should be shared. 
+
+The reinforcement signal itself, as stated in section 10, will be related to some
+QoS metric / transmission slowdown/ or successful transmission percentage.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
     \hypertarget{random-thoughts}{%
 \pagebreak
 \section{References:}\label{references}}
+
+\begin{flushleft}
+
+-RL for Routing in MANETs
+\medskip
+
+[1] 	Y.-H. Chang, T. Ho and L. P. Kaelbling, "Mobilized ad-hoc networks: A reinforcement learning approach". 
+\medskip
+
+[2] 	K. Maneenil and W. Usaha, "Preventing malicious nodes in ad hoc networks using reinforcement learning," in 2005 2nd International Symposium on Wireless Communication Systems. 
+\medskip
+\medskip
+
+-RL for Routing
+\medskip
+
+[3] 	J. A. Boyan and M. L. Littman·, "Packet Routing in Dynamically Changing Networks: A Reinforcement Learning Approach". 
+\medskip
+
+[4] 	G. Stampa, M. Arias, D. Sánchez-Charles, V. Muntés-Mulero and A. Cabellos, "A Deep-Reinforcement Learning Approach for Software-Defined Networking Routing Optimization". 
+\medskip
+\medskip
+
+-Time Domain Scheduling
+\medskip
+
+[5] 	A. Köse, N. Evirgen, H. Gökcesu, K. Gökcesu and M. Médard, "Nearly Optimal Scheduling of Wireless Ad Hoc Networks in Polynomial Time," 2017. 
+\medskip
+
+[6] 	Y. Xu, W. Chen, Z. Cao and K. B. Letaief, "A Distributed Random Access Protocol with Enhanced Routing in Time-Slotted MANETs," in IEEE GLOBECOM 2008 - 2008 IEEE Global Telecommunications Conference, 2008. 
+\medskip
+\medskip
+
+-Graph Convolutional Network / Graph Signal Processing
+\medskip
+
+[7] 	R. Li, S. Wang, F. Zhu and J. Huang, "Adaptive Graph Convolutional Neural Networks," 9 1 2018. 
+
+
+\end{flushleft}
+
 
     \hypertarget{random-thoughts}{%
 \pagebreak
@@ -755,6 +912,9 @@ information regarding collisions between $n_\ell$ and $n \in \{N \diagup n_\ell\
 \item
   perhaps some information is always passed along as part of the packet header?
   Inspiration from ant colony optimization.
+  
+\item
+perhaps packet size can be accounted for in the scheme (some messages might be considerably smaller and require less time to transmit
   
 \end{itemize}
 
